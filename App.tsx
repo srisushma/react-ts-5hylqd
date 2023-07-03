@@ -7,14 +7,14 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
-import Hello from './Hello';
+import Home from './Home';
 import ToggleComponent from './ToggleComponent';
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<Home />} />
         <Route path="/toggleComponent" element={<ToggleComponent />} />
       </Routes>
     </div>
