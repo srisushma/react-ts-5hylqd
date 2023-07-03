@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { fetchToggleApi, featureToggle } from './featureToggleApi';
+import { fetchToggleApi } from './featureToggleApi';
 
 const ToggleComponent = () => {
   const [loading, setLoading] = React.useState(false);
@@ -19,7 +19,7 @@ const ToggleComponent = () => {
   React.useEffect(fetchToggles, []);
 
   const handleButtonToggle = () => {
-    fetchToggles();
+    setToggleState(currentState => !currentState);
   };
   const message = loading
     ? 'Loading...'
